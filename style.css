@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23838383' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    text-align:center;
+}
+*:before, *:after {
+  content: "";
+  position: absolute;
+}
+
+.flex, label, .advent-calendar__wapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.advent-calendar {
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(8, 2em);
+  grid-template-rows: repeat(3, 2em);
+  grid-gap: 0.5em;
+  width: 80em;
+margin:auto;
+
+}
+.advent-calendar > p {
+  color:black;
+  position:absolute;
+  text-align:center;
+  margin: auto;
+  font-size: 5em;
+  top:1em;
+  left: 1em;
+  left:20%;
+
+}
+
+.advent-calendar__box {
+  padding-top: 145px;
+}
+.advent-calendar__wapper {
+  flex-wrap: wrap;
+  
+}
+.advent-calendar__item:nth-child(odd) .door {
+  background:white;
+}
+
+.box {
+  display: none;
+}
+.box:checked + label .door {
+  transform: rotatey(-5deg) rotatex(85deg);
+}
+
+label {
+  position: relative;
+  width: 4em;
+  height:4em;
+  font-size: 50px;
+}
+
+.door {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  cursor: pointer;
+  border: 1px solid #fff;
+  transform-origin: top center;
+  transition: 1s;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.door span {
+  display: block;
+  text-align: center;
+  line-height: 1;
+  margin-top: 0.5em;
+  font-size: 2em;
+  padding-left:4px;
+}
+.door:before {
+  bottom: 10px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  background:transparent;
+  box-shadow: 1px -1px 0px 1px #d4d4d4 inset;
+  border-radius: 50%;
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  background:transparent;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content {
+font-size: 3em;
+ align-items: center;
+ justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+.content span {
+  position: absolute;
+}
+.content:hover {
+  -webkit-animation: 2s ease-in-out infinite contentMove;
+          animation: 2s ease-in-out infinite contentMove;
+}
+
+.present {
+  position: absolute;
+  bottom: 0;
+  left: 110px;
+  width: 30px;
+  height: 25px;
+  border-radius: 50% 50% 10px 10px;
+  background: transparent;
+}
+.present:before {
+  top: -9px;
+  left: 6px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transform: rotate(-55deg);
+}
+.present:after {
+  top: 0px;
+  left: 7px;
+  width: 7px;
+  height: 2px;
+  transform: rotate(-20deg);
+  background: #000;
+}
+
+@-webkit-keyframes contentMove {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes contentMove {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+p{
+  position:absolute;
+  text-align:center;
+  align-items:center;
+  margin:auto;
+  padding:auto;
+
+}
+a{text-decoration:none;}
+
+.vip{color:darkgrey}
+.vip:hover {
+  -webkit-animation: 2s ease-in-out infinite contentMove;
+          animation: 2s ease-in-out infinite contentMove;
+}
