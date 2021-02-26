@@ -34,7 +34,7 @@ margin:auto;
   position:absolute;
   text-align:center;
   margin: auto;
-  font-size: 5em;
+  font-size: 4em;
   top:1em;
   left: 1em;
   left:20%;
@@ -177,11 +177,9 @@ font-size: 3em;
   }
 }
 p{
-  position:absolute;
   text-align:center;
   align-items:center;
   margin:auto;
-  padding:auto;
 
 }
 a{text-decoration:none;}
